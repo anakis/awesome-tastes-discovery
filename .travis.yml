@@ -10,8 +10,8 @@ branches:
 addons:
   chrome: stable
 script:
-- ng test --watch=false --code-coverage
-- ng build
+- ng build --prod --aot
+- ng test
 - xvfb-run npm run e2e
 after_script:
 - chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
