@@ -7,6 +7,12 @@ install: npm install
 branches:
   only:
   - master
+addons:
+  chrome: stable
+script:
+- ng test --watch false -cc
+- ng build
+- xvfb-run npm run e2e
 after_script:
 - chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
 deploy:
