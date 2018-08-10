@@ -10,7 +10,7 @@ branches:
 addons:
   chrome: stable
 script:
-- ng test --watch false -cc
+- ng test --watch=false --code-coverage
 - ng build
 - xvfb-run npm run e2e
 after_script:
