@@ -14,8 +14,6 @@ script:
 - ng build --prod --aot
 - ng test
 - xvfb-run npm run e2e
-after_script:
-- chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
 deploy:
   provider: heroku
   api_key:
