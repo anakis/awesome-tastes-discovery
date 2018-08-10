@@ -8,7 +8,7 @@ branches:
   only:
   - master
 sudo: required
-  addons:
+addons:
   chrome: stable
 script:
 - ng build --prod --aot
