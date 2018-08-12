@@ -1,17 +1,17 @@
-var http = require('http'),
-    fs = require('fs')
-var port = process.env.PORT || 3000
-http.createServer(function(req, res) {
-    var url = './dist/index.html';
-    fs.readFile(url, function(err, html) {
-        if (err) {
-            var message404 = "There is no such page! <a href='/'>Back to home page</a>"
-            res.writeHead(404, {'Content-Type': 'text/html', 'Content-Length': message404.length})
-            res.write(message404)
-        } else {
-            res.writeHead(200, {'Content-Type': 'text/html', 'Content-Length': html.length})
-            res.write(html)
-        }
-        res.end()
-    })
-}).listen(port)
+var express = require('express');
+var path = require('path');
+
+var app = express();
+
+app.use(express.static(path.join(__dirname, 'dist'), {
+    etag: false
+}));
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+});
+
+
+app.listen(process.env.PORT || 3000, function () {
+    console.log("Starting service...");
+});
