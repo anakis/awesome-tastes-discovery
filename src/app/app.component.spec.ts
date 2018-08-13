@@ -1,14 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { TemplateModule } from '@app/template/template.module';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { MainComponent } from '@app/main/main.component';
+import { APP_BASE_HREF } from '@angular/common';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        MainComponent
       ],
       imports: [
-        TemplateModule
+        TemplateModule,
+        AppRoutingModule
+      ],
+      providers: [
+        { provide: APP_BASE_HREF, useValue: '/' }
       ]
     }).compileComponents();
   }));
@@ -26,6 +34,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('app-warp-container')).toBeTruthy();
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
   }));
 });
