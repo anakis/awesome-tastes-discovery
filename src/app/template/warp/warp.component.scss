@@ -1,0 +1,19 @@
+@import '~sass/variables';
+
+:host {
+    flex: 1;
+}
+
+.warp-content {    
+    height: 100vh;    
+}
+
+.yellow-theme {
+    background-color: $yellow;
+    color: $yellow-text;
+}
+
+.blue-theme {
+    background-color: $blue;
+    color: $blue-text;
+}
