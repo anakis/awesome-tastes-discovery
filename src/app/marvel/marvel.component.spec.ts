@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MarvelComponent } from './marvel.component';
 import { FeatureModule } from '@app/feature/feature.module';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MarvelComponent', () => {
   let component: MarvelComponent;
@@ -10,7 +11,7 @@ describe('MarvelComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MarvelComponent ],
-      imports: [FeatureModule]
+      imports: [HttpClientModule, FeatureModule]
     })
     .compileComponents();
   }));
