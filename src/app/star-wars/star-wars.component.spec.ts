@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { StarWarsComponent } from './star-wars.component';
 import { FeatureModule } from '@app/feature/feature.module';
 import { HttpClientModule } from '@angular/common/http';
+import { StarWarsResourcesModule } from '@app/star-wars/star-wars-resources/star-wars-resources.module';
 
 describe('StarWarsComponent', () => {
   let component: StarWarsComponent;
@@ -11,7 +12,7 @@ describe('StarWarsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ StarWarsComponent ],
-      imports: [HttpClientModule, FeatureModule]
+      imports: [HttpClientModule, StarWarsResourcesModule , FeatureModule]
     })
     .compileComponents();
   }));

@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FilmComponent implements OnInit {
 
   @Input()
-  film: any;
+  film: any = {};
 
   constructor() { }
 

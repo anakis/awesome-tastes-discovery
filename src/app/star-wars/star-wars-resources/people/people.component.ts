@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PeopleComponent implements OnInit {
 
   @Input()
-  people: any;
+  people: any = {};
 
   constructor() { }
 
