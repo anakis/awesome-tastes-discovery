@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarvelService, COMICS } from '@app/marvel/marvel.service';
 
 @Component({
   selector: 'app-marvel',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: MarvelService) { }
 
   ngOnInit() {
+    this.service.get(COMICS).subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
   }
 
 }

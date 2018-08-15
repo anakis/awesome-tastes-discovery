@@ -16,7 +16,7 @@ export interface Response {
   count: Number;
   next: string;
   previous: string;
-  [index: number]: Object;
+  result: any;
 }
 
 @Injectable({
