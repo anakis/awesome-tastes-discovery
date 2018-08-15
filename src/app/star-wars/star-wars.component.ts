@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StarWarsService, FILMS, VEHICLES, Response } from '@app/star-wars/star-wars.service';
+import { StarWarsService, ENDPOINTS, Response } from '@app/star-wars/star-wars.service';
 
 @Component({
   selector: 'app-star-wars',
@@ -8,13 +8,24 @@ import { StarWarsService, FILMS, VEHICLES, Response } from '@app/star-wars/star-
 })
 export class StarWarsComponent implements OnInit {
 
+  resources = ENDPOINTS;
+
   constructor(private service: StarWarsService) {
 
   }
+
+  resourcesKeys() {    
+    return Object.keys(this.resources);
+  }
+
   data: Response;
 
   ngOnInit() {
-    this.service.get(VEHICLES).subscribe(
+    
+  }
+
+  getResource(e) {
+    this.service.get(e).subscribe(
       (data: Response) => {this.data = { ...data }; console.log(this.data)},
       err => console.log(err)
     );
