@@ -14,19 +14,24 @@ export class StarWarsComponent implements OnInit {
 
   }
 
-  resourcesKeys() {    
+  resourcesKeys() {
     return Object.keys(this.resources);
   }
 
-  data: Response;
+  data: Response = {
+    count: 0,
+    next: '',
+    previous: '',
+    results: [],
+  };
 
   ngOnInit() {
-    
+
   }
 
   getResource(e) {
     this.service.get(e).subscribe(
-      (data: Response) => {this.data = { ...data }; console.log(this.data)},
+      (data: Response) => { this.data = { ...data }; console.log(this.data) },
       err => console.log(err)
     );
   }

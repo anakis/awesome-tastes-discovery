@@ -19,7 +19,7 @@ export interface Response {
   count: Number;
   next: string;
   previous: string;
-  result: any;
+  results: any;
 }
 
 @Injectable({
@@ -30,7 +30,7 @@ export class StarWarsService {
   // The Star Wars root URL
   private readonly API_BASE_URL = 'https://swapi.co/api/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }  
 
   /**
    * 
