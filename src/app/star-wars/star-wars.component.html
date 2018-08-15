@@ -6,6 +6,11 @@
     </li>
 </ul>
 
-<ul>
-    <li *ngFor="let d of data.results">{{d.name}}</li>
-</ul>
+<ng-container [ngSwitch]="currentResource">
+    <ng-container *ngSwitchCase="'people'">
+        <app-people *ngFor="let d of data.results" [people]="d"></app-people>
+    </ng-container>
+    <ng-container *ngSwitchCase="'films'">
+        <app-film *ngFor="let d of data.results" [film]="d"></app-film>
+    </ng-container>
+</ng-container>

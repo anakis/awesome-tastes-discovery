@@ -10,6 +10,8 @@ export class StarWarsComponent implements OnInit {
 
   resources = ENDPOINTS;
 
+  currentResource = '';
+
   constructor(private service: StarWarsService) {
 
   }
@@ -30,6 +32,7 @@ export class StarWarsComponent implements OnInit {
   }
 
   getResource(e) {
+    this.currentResource = e;
     this.service.get(e).subscribe(
       (data: Response) => { this.data = { ...data }; console.log(this.data) },
       err => console.log(err)
