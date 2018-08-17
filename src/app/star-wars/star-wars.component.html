@@ -13,4 +13,7 @@
     <ng-container *ngSwitchCase="'films'">
         <app-film *ngFor="let d of data.results" [film]="d"></app-film>
     </ng-container>
+    <ng-container *ngSwitchCase="'starships'">
+        <app-starship *ngFor="let d of data.results" [starship]="d"></app-starship>
+    </ng-container>
 </ng-container>
