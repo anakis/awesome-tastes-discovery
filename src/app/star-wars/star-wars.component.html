@@ -16,4 +16,7 @@
     <ng-container *ngSwitchCase="'starships'">
         <app-starship *ngFor="let d of data.results" [starship]="d"></app-starship>
     </ng-container>
+    <ng-container *ngSwitchCase="'vehicles'">
+        <app-vehicle *ngFor="let d of data.results" [vehicle]="d"></app-vehicle>
+    </ng-container>
 </ng-container>
