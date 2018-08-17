@@ -22,4 +22,7 @@
     <ng-container *ngSwitchCase="'species'">
         <app-specie *ngFor="let d of data.results" [specie]="d"></app-specie>
     </ng-container>
+    <ng-container *ngSwitchCase="'planets'">
+        <app-planet *ngFor="let d of data.results" [planet]="d"></app-planet>
+    </ng-container>
 </ng-container>
