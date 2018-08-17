@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-specie',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./specie.component.scss']
 })
 export class SpecieComponent implements OnInit {
+
+  @Input()
+  specie: any = {};
 
   constructor() { }
 
