@@ -1,11 +1,9 @@
 import { OnInit } from '@angular/core';
+import { Resource } from '@app/_common/resource.component';
 
-export abstract class MarvelResourcesComponent implements OnInit {
+export abstract class MarvelResourcesComponent extends Resource {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  
+  setResource() {
+    this.resource = 'marvel';
+  }  
 }
