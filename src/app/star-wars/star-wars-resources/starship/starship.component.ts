@@ -15,4 +15,7 @@ export class StarshipComponent extends StarWarsResourcesComponent implements OnI
   ngOnInit() {
   }
 
+  setType() {
+    this.type = 'starship';
+  }
 }

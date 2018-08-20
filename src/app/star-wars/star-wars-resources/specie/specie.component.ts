@@ -15,4 +15,8 @@ export class SpecieComponent extends StarWarsResourcesComponent implements OnIni
   ngOnInit() {
   }
 
+  setType() {
+    this.type = 'specie';
+  }
+
 }

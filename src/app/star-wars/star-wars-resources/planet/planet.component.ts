@@ -15,4 +15,7 @@ export class PlanetComponent extends StarWarsResourcesComponent implements OnIni
   ngOnInit() {
   }
 
+  setType() {
+    this.type = 'planet';
+  }
 }

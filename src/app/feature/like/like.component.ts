@@ -14,14 +14,17 @@ export class LikeComponent implements OnInit {
   @Input()
   type: String = '';
 
+  @Input()
+  resource: String = '';
+
   constructor(private service: LikeService) { }
 
   ngOnInit() {
   }
 
   saveLike() {
-    const { data, type } = this;
-    if (this.service.saveLike({ data, type }))
+    const { data, type, resource } = this;
+    if (this.service.saveLike({ data, type, resource }))
       console.log("saved");
     else
       console.log("error");

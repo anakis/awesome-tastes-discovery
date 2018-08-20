@@ -12,6 +12,10 @@ export class PeopleComponent extends StarWarsResourcesComponent implements OnIni
     super();
   }
 
+  setType() {
+    this.type = 'people';
+  }
+
   ngOnInit() {
   }
 

@@ -15,4 +15,7 @@ export class VehicleComponent extends StarWarsResourcesComponent implements OnIn
   ngOnInit() {
   }
 
+  setType() {
+    this.type = 'vehicle';
+  }
 }

@@ -8,8 +8,13 @@ import { StarWarsResourcesComponent } from '@app/star-wars/star-wars-resources/s
 })
 export class FilmComponent extends StarWarsResourcesComponent implements OnInit {
 
-  constructor() { 
+
+  constructor() {
     super();
+  }
+  
+  setType() {
+    this.type = 'film';
   }
 
   ngOnInit() {

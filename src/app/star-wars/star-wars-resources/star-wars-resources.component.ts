@@ -12,11 +12,22 @@ export abstract class StarWarsResourcesComponent implements OnInit {
   /**
    * type of resource to be handle in LikeList screen
    */
-  readonly type: String = 'star-wars';
+  type: String = '';
+  /**
+   * resource to be handle in LikeList screen
+   */
+  readonly resource: String = 'star-wars';
 
-  constructor() { }
+  constructor() {
+    this.setType();
+   }
 
   ngOnInit() {
   }
 
+  /**
+   *  Method to be implemented to force resource type definition
+   *  Ex.: this.type = 'SOME_VALUE';
+   */
+  abstract setType();
 }
