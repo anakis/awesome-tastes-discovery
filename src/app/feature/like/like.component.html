@@ -1,1 +1,6 @@
-<button (click)="saveLike()">Like</button>
+<div *ngIf="!active(); else elseBlock">
+  <button (click)="saveLike()">Like</button>
+</div>
+<ng-template #elseBlock>
+    <button (click)="disLike()">Liked</button>
+</ng-template>
