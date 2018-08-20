@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { OnInit, Input } from '@angular/core';
 
 
 export abstract class StarWarsResourcesComponent implements OnInit {
