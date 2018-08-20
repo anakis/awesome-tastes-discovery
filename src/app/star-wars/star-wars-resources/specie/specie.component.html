@@ -1,7 +1,7 @@
 <p>
-  Name: {{specie.name}} <br />
-  Language: {{specie.language}} <br />
-  Designation: {{specie.designation}} <br />  
-  Classification: {{specie.classification}} <br />  
-  <button>Like</button>
+  Name: {{data.name}} <br />
+  Language: {{data.language}} <br />
+  Designation: {{data.designation}} <br />  
+  Classification: {{data.classification}} <br />  
+  <app-like [data]="data" [type]="type"></app-like>
 </p>

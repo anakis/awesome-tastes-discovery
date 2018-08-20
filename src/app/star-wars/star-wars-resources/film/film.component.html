@@ -1,9 +1,9 @@
 <p>
-    Title: {{film.title}} <br />
-    Episode Number: {{film.episode_id}} <br />
-    Opening Crawl: {{film.opening_crawl}} <br />
-    Producer: {{film.producer}} <br />
-    Release_date: {{film.release_date}} <br />
-    <button>Like</button>
+    Title: {{data.title}} <br />
+    Episode Number: {{data.episode_id}} <br />
+    Opening Crawl: {{data.opening_crawl}} <br />
+    Producer: {{data.producer}} <br />
+    Release_date: {{data.release_date}} <br />
+    <app-like [data]="data" [type]="type"></app-like>
   </p>
   

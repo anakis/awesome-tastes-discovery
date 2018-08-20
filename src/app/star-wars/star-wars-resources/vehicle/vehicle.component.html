@@ -1,6 +1,6 @@
 <p>
-  Name: {{vehicle.name}} <br />
-  Model: {{vehicle.model}} <br />
-  Manufacturer: {{vehicle.manufacturer}} <br />  
-  <button>Like</button>
+  Name: {{data.name}} <br />
+  Model: {{data.model}} <br />
+  Manufacturer: {{data.manufacturer}} <br />  
+  <app-like [data]="data" [type]="type"></app-like>
 </p>

@@ -6,10 +6,13 @@ import { StarshipComponent } from './starship/starship.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { SpecieComponent } from './specie/specie.component';
 import { PlanetComponent } from './planet/planet.component';
+import { FeatureModule } from '@app/feature/feature.module';
+import { StarWarsResourcesComponent } from './star-wars-resources.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FeatureModule
   ],
   declarations: [PeopleComponent, FilmComponent, StarshipComponent, VehicleComponent, SpecieComponent, PlanetComponent],
   exports: [PeopleComponent, FilmComponent, StarshipComponent, VehicleComponent, SpecieComponent, PlanetComponent]

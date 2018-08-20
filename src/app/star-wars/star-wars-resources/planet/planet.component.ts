@@ -1,16 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { StarWarsResourcesComponent } from '@app/star-wars/star-wars-resources/star-wars-resources.component';
 
 @Component({
   selector: 'app-planet',
   templateUrl: './planet.component.html',
   styleUrls: ['./planet.component.scss']
 })
-export class PlanetComponent implements OnInit {
+export class PlanetComponent extends StarWarsResourcesComponent implements OnInit {
 
-  @Input()
-  planet: any = {};
-
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit() {
   }

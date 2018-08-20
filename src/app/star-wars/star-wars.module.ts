@@ -10,8 +10,8 @@ import { StarWarsResourcesModule } from '@app/star-wars/star-wars-resources/star
   imports: [
     CommonModule,
     StarWarsRoutingModule,
-    StarWarsResourcesModule,
-    FeatureModule
+    FeatureModule,
+    StarWarsResourcesModule
   ],
   declarations: [StarWarsComponent]
 })

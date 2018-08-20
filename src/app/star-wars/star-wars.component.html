@@ -8,21 +8,21 @@
 
 <ng-container [ngSwitch]="currentResource">
     <ng-container *ngSwitchCase="'people'">
-        <app-people *ngFor="let d of data.results" [people]="d"></app-people>
+        <app-people *ngFor="let d of data.results" [data]="d"></app-people>
     </ng-container>
     <ng-container *ngSwitchCase="'films'">
-        <app-film *ngFor="let d of data.results" [film]="d"></app-film>
+        <app-film *ngFor="let d of data.results" [data]="d"></app-film>
     </ng-container>
     <ng-container *ngSwitchCase="'starships'">
-        <app-starship *ngFor="let d of data.results" [starship]="d"></app-starship>
+        <app-starship *ngFor="let d of data.results" [data]="d"></app-starship>
     </ng-container>
     <ng-container *ngSwitchCase="'vehicles'">
-        <app-vehicle *ngFor="let d of data.results" [vehicle]="d"></app-vehicle>
+        <app-vehicle *ngFor="let d of data.results" [data]="d"></app-vehicle>
     </ng-container>
     <ng-container *ngSwitchCase="'species'">
-        <app-specie *ngFor="let d of data.results" [specie]="d"></app-specie>
+        <app-specie *ngFor="let d of data.results" [data]="d"></app-specie>
     </ng-container>
     <ng-container *ngSwitchCase="'planets'">
-        <app-planet *ngFor="let d of data.results" [planet]="d"></app-planet>
+        <app-planet *ngFor="let d of data.results" [data]="d"></app-planet>
     </ng-container>
 </ng-container>
