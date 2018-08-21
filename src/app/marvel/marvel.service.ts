@@ -4,7 +4,15 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 // All endpoints that API supports
-export const COMICS = 'comics';
+export const ENDPOINTS = {
+  CHARACTERS: 'characters',
+  COMICS: 'comics',
+  CREATORS: 'creators',
+  EVENTS: 'events',
+  SERIES: 'series',
+  STORIES: 'stories'
+
+}
 
 // Interface mapped from API
 export interface Response {

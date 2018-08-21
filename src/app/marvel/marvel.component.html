@@ -1,1 +1,28 @@
 <app-page></app-page>
+<ul>
+    <li *ngFor="let e of resourcesKeys()">
+        <input type="radio" name="resource" value="resources[e]" (change)="getResource(resources[e])">
+        {{resources[e] | firstLetterUpper}}
+    </li>
+</ul>
+
+<ng-container [ngSwitch]="currentResource">
+    <ng-container *ngSwitchCase="'characters'">
+        <app-character *ngFor="let d of data.data.results" [data]="d"></app-character>
+    </ng-container>
+    <ng-container *ngSwitchCase="'comics'">
+        <app-comic *ngFor="let d of data.data.results" [data]="d"></app-comic>
+    </ng-container>
+    <ng-container *ngSwitchCase="'creators'">
+        <app-creator *ngFor="let d of data.data.results" [data]="d"></app-creator>
+    </ng-container>
+    <ng-container *ngSwitchCase="'events'">
+        <app-event *ngFor="let d of data.data.results" [data]="d"></app-event>
+    </ng-container>
+    <ng-container *ngSwitchCase="'series'">
+        <app-serie *ngFor="let d of data.data.results" [data]="d"></app-serie>
+    </ng-container>
+    <ng-container *ngSwitchCase="'stories'">
+        <app-storie *ngFor="let d of data.data.results" [data]="d"></app-storie>
+    </ng-container>
+</ng-container>

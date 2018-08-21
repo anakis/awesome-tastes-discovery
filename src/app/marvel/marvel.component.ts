@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MarvelService, COMICS } from '@app/marvel/marvel.service';
+import { MarvelService, ENDPOINTS, Response } from '@app/marvel/marvel.service';
 
 @Component({
   selector: 'app-marvel',
@@ -8,13 +8,32 @@ import { MarvelService, COMICS } from '@app/marvel/marvel.service';
 })
 export class MarvelComponent implements OnInit {
 
+  resources = ENDPOINTS;
+
+  currentResource = '';
+  
+  data: Response = {
+    data: {
+      results: []
+    }
+  };
+
   constructor(private service: MarvelService) { }
 
-  ngOnInit() {
-    this.service.get(COMICS).subscribe(
-      data => console.log(data),
-      error => console.log(error)
-    );
+  resourcesKeys() {
+    return Object.keys(this.resources);
   }
 
+  ngOnInit() {
+    
+  }
+
+  getResource(e) {
+    this.currentResource = e;
+    console.log(this.currentResource);
+    this.service.get(e).subscribe(
+      (data: Response) => { this.data = data; console.log(this.data) },
+      err => console.log(err)
+    );
+  }
 }
