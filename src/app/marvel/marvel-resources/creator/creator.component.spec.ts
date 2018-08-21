@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreatorComponent } from './creator.component';
+import { FeatureModule } from '@app/feature/feature.module';
 
 describe('CreatorComponent', () => {
   let component: CreatorComponent;
@@ -8,7 +9,8 @@ describe('CreatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreatorComponent ]
+      declarations: [ CreatorComponent ],
+      imports: [ FeatureModule ]
     })
     .compileComponents();
   }));

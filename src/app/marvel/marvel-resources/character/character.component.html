@@ -1,6 +1,6 @@
 <p>
     Name: {{data.name}} <br />
-    <img src="{{data.thumbnail.path + '/portrait_small.'+ data.thumbnail.extension}}" alt="{{data.name}}">
+    <img src="{{data.thumbnail?.path + '/portrait_small.'+ data.thumbnail?.extension}}" alt="{{data.name}}">
     <app-like [data]="data" [type]="type" [resource]="resource" checkBy="id"></app-like>
   </p>
   
