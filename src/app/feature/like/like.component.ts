@@ -17,6 +17,9 @@ export class LikeComponent implements OnInit {
   @Input()
   resource: String = '';
 
+  @Input()
+  checkBy: String = 'id';
+
   constructor(private service: LikeService) { }
 
   ngOnInit() {
@@ -39,6 +42,6 @@ export class LikeComponent implements OnInit {
   }
 
   active() {
-    return this.service.checkLiked(this.data);
+    return this.service.checkLiked(this.data, this.checkBy);
   }
 }

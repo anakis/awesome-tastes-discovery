@@ -36,8 +36,10 @@ export class LikeService {
     return [];
   }
 
-  checkLiked(data): boolean {
+  checkLiked(data, checkBy?): boolean {
     let likes: Array<any> = this.getLikes();
+    if(checkBy)
+      return likes.some(e => e.data[checkBy] === data[checkBy]);
     return likes.some(e => e.data.url === data.url);
   }
 }
