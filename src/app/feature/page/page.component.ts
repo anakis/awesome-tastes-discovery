@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-page',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
+  @Input()
+  title: String = '';
+  
+  @Input()
+  instructions: String = '';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  makePagePresentation() {
+    return `${this.title} resources!`;
   }
 
 }

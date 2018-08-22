@@ -12,6 +12,8 @@ export class StarWarsComponent implements OnInit {
 
   currentResource = '';
 
+  instructions = 'Please select one of the resource categories below, then a list of items from each category will be displayed. So, you can give like to the items of your choice!';
+
   constructor(private service: StarWarsService) {
 
   }

@@ -1,5 +1,15 @@
 <header>
-<nav></nav>
+<nav>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/likes">Likes</a></li>
+    </ul>
+</nav>
 </header>
-<article></article>
-<footer></footer>
+<article>
+    <app-welcome [presantation]="makePagePresentation()" [description]="instructions"></app-welcome>
+    <ng-content></ng-content>
+</article>
+<footer>
+
+</footer>
