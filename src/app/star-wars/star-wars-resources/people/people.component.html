@@ -2,5 +2,5 @@
   Name: {{data.name}} <br />
   Gender: {{data.gender}} <br />
   Birth Year: {{data.birth_year}} <br />
-  <app-like [data]="data" [type]="type" [resource]="resource"></app-like>
+  <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()"></app-like>
 </p>

@@ -1,6 +1,6 @@
 <p>
     Name: {{data.fullName || 'None'}} <br />    
     <img src="{{data.thumbnail?.path + '/portrait_small.'+ data.thumbnail?.extension}}" alt="{{data.fullName}}">
-    <app-like [data]="data" [type]="type" [resource]="resource" checkBy="id"></app-like>
+    <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()" checkBy="id"></app-like>
   </p>
   

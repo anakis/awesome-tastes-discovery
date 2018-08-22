@@ -2,5 +2,5 @@
   Name: {{data.name}} <br />
   Model: {{data.model}} <br />
   Class: {{data.starship_class}} <br />  
-  <app-like [data]="data" [type]="type" [resource]="resource"></app-like>
+  <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()"></app-like>
 </p>

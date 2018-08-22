@@ -2,6 +2,6 @@
     Title: {{data.title}} <br />    
     Description: {{data.description || 'None'}} <br />    
     <img *ngIf="data.thumbnail" src="{{data.thumbnail?.path + '/portrait_small.'+ data.thumbnail?.extension}}" alt="{{data.title}}">
-    <app-like [data]="data" [type]="type" [resource]="resource" checkBy="id"></app-like>
+    <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()" checkBy="id"></app-like>
   </p>
   

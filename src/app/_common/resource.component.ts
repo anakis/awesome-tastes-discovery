@@ -1,4 +1,4 @@
-import { Input } from "@angular/core";
+import { Input, Output, EventEmitter } from "@angular/core";
 
 export abstract class Resource {
     /**
@@ -15,6 +15,9 @@ export abstract class Resource {
      * resource to be handle in LikeList screen
      */
     resource: String = '';
+
+    @Output()
+    likeChange: EventEmitter<Boolean> = new EventEmitter<Boolean>();
 
     constructor() {
         this.setType();
@@ -35,4 +38,8 @@ export abstract class Resource {
      *  Ex.: this.resource = 'SOME_VALUE';
      */
     abstract setResource();
+
+    onLikeChange() {
+        this.likeChange.emit(true);
+    }
 }

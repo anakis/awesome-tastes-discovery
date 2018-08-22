@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { LikeService } from '@app/feature/like/like.service';
 
 @Component({
@@ -18,7 +18,10 @@ export class LikeComponent implements OnInit {
   resource: String = '';
 
   @Input()
-  checkBy: String = 'id';
+  checkBy: String = '';
+
+  @Output()
+  likeChange: EventEmitter<Boolean> = new EventEmitter<Boolean>();
 
   constructor(private service: LikeService) { }
 
@@ -31,6 +34,7 @@ export class LikeComponent implements OnInit {
       console.log("saved");
     else
       console.log("error");
+    this.emit();
   }
 
   disLike() {
@@ -39,6 +43,11 @@ export class LikeComponent implements OnInit {
       console.log("removed");
     else
       console.log("error");
+    this.emit();
+  }
+
+  emit() {
+    this.likeChange.emit(true);
   }
 
   active() {
