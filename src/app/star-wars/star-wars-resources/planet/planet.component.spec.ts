@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlanetComponent } from './planet.component';
 import { FeatureModule } from '@app/feature/feature.module';
+import { TemplateModule } from '@app/template/template.module';
 
 describe('PlanetComponent', () => {
   let component: PlanetComponent;
@@ -10,7 +11,7 @@ describe('PlanetComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PlanetComponent ],
-      imports: [ FeatureModule ]
+      imports: [ FeatureModule, TemplateModule ]
     })
     .compileComponents();
   }));

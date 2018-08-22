@@ -4,6 +4,9 @@ import { MarvelComponent } from './marvel.component';
 import { FeatureModule } from '@app/feature/feature.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MarvelResourcesModule } from '@app/marvel/marvel-resources/marvel-resources.module';
+import { TemplateModule } from '@app/template/template.module';
+import { RouterTestingModule } from '@angular/router/testing';
+
 
 describe('MarvelComponent', () => {
   let component: MarvelComponent;
@@ -12,7 +15,7 @@ describe('MarvelComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MarvelComponent ],
-      imports: [HttpClientModule, MarvelResourcesModule, FeatureModule]
+      imports: [HttpClientModule, MarvelResourcesModule, FeatureModule, TemplateModule, RouterTestingModule]
     })
     .compileComponents();
   }));
