@@ -4,16 +4,22 @@ import { TemplateModule } from '@app/template/template.module';
 import { AppRoutingModule } from '@app/app-routing.module';
 import { MainComponent } from '@app/main/main.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { LikeListComponent } from '@app/like-list/like-list.component';
+import { StarWarsResourcesModule } from '@app/star-wars/star-wars-resources/star-wars-resources.module';
+import { MarvelResourcesModule } from '@app/marvel/marvel-resources/marvel-resources.module';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        MainComponent
+        MainComponent,
+        LikeListComponent
       ],
       imports: [
         TemplateModule,
-        AppRoutingModule
+        AppRoutingModule,
+        StarWarsResourcesModule,
+        MarvelResourcesModule
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' }
