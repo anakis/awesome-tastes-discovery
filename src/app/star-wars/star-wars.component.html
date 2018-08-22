@@ -1,4 +1,4 @@
-<app-page title="Star Wars" [instructions]="instructions">    
+<app-page title="Star Wars" [instructions]="instructions">
     <ul>
         <li *ngFor="let e of resourcesKeys()">
             <input type="radio" name="resource" value="resources[e]" (change)="getResource(resources[e])"> {{resources[e] | firstLetterUpper}}
@@ -6,23 +6,37 @@
     </ul>
 
     <ng-container [ngSwitch]="currentResource">
-        <ng-container *ngSwitchCase="'people'">
-            <app-people *ngFor="let d of data.results" [data]="d"></app-people>
-        </ng-container>
-        <ng-container *ngSwitchCase="'films'">
-            <app-film *ngFor="let d of data.results" [data]="d"></app-film>
-        </ng-container>
-        <ng-container *ngSwitchCase="'starships'">
-            <app-starship *ngFor="let d of data.results" [data]="d"></app-starship>
-        </ng-container>
-        <ng-container *ngSwitchCase="'vehicles'">
-            <app-vehicle *ngFor="let d of data.results" [data]="d"></app-vehicle>
-        </ng-container>
-        <ng-container *ngSwitchCase="'species'">
-            <app-specie *ngFor="let d of data.results" [data]="d"></app-specie>
-        </ng-container>
-        <ng-container *ngSwitchCase="'planets'">
-            <app-planet *ngFor="let d of data.results" [data]="d"></app-planet>
-        </ng-container>
+        <app-row>
+            <ng-container *ngSwitchCase="'people'">
+                <app-col *ngFor="let d of data.results">
+                    <app-people [data]="d"></app-people>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'films'">
+                <app-col *ngFor="let d of data.results">
+                    <app-film [data]="d"></app-film>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'starships'">
+                <app-col *ngFor="let d of data.results">
+                    <app-starship [data]="d"></app-starship>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'vehicles'">
+                <app-col *ngFor="let d of data.results">
+                    <app-vehicle [data]="d"></app-vehicle>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'species'">
+                <app-col *ngFor="let d of data.results">
+                    <app-specie [data]="d"></app-specie>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'planets'">
+                <app-col *ngFor="let d of data.results">
+                    <app-planet [data]="d"></app-planet>
+                </app-col>
+            </ng-container>
+        </app-row>
     </ng-container>
 </app-page>
