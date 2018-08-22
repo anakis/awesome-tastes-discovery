@@ -1,7 +1,13 @@
-<p>
-  Name: {{data.name}} <br />
-  Language: {{data.language}} <br />
-  Designation: {{data.designation}} <br />  
-  Classification: {{data.classification}} <br />  
-  <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()"></app-like>
-</p>
+<app-card [title]="data.name">
+  <section class="body">
+    <b>Language:</b> {{data.language}}
+    <br />
+    <b>Designation:</b> {{data.designation}}
+    <br />
+    <b>Classification:</b> {{data.classification}}
+    <br />
+  </section>
+  <section class="action">
+    <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()"></app-like>
+  </section>
+</app-card>

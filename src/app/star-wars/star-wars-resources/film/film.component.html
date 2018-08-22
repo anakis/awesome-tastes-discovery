@@ -1,9 +1,11 @@
-<p>
-    Title: {{data.title}} <br />
-    Episode Number: {{data.episode_id}} <br />
-    Opening Crawl: {{data.opening_crawl}} <br />
-    Producer: {{data.producer}} <br />
-    Release_date: {{data.release_date}} <br />
+<app-card [title]="data.title">
+  <section class="body">
+    <b>Episode Number:</b> {{data.episode_id}} <br />   
+    <b>Producer:</b> {{data.producer}} <br />
+    <b>Release_date:</b> {{data.release_date}} <br />
+    <br />
+  </section>
+  <section class="action">
     <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()"></app-like>
-  </p>
-  
+  </section>
+</app-card>
