@@ -1,28 +1,41 @@
-<app-page></app-page>
-<ul>
-    <li *ngFor="let e of resourcesKeys()">
-        <input type="radio" name="resource" value="resources[e]" (change)="getResource(resources[e])">
-        {{resources[e] | firstLetterUpper}}
-    </li>
-</ul>
-
-<ng-container [ngSwitch]="currentResource">
-    <ng-container *ngSwitchCase="'characters'">
-        <app-character *ngFor="let d of data.data.results" [data]="d"></app-character>
+<app-page title="Marvel Comics" [instructions]="instructions">
+    <ul>
+        <li *ngFor="let e of resourcesKeys()">
+            <input type="radio" name="resource" value="resources[e]" (change)="getResource(resources[e])"> {{resources[e] | firstLetterUpper}}
+        </li>
+    </ul>
+    <ng-container [ngSwitch]="currentResource">
+        <app-row>
+            <ng-container *ngSwitchCase="'characters'">
+                <app-col *ngFor="let d of data.data.results">
+                    <app-character [data]="d"></app-character>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'comics'">
+                <app-col *ngFor="let d of data.data.results">
+                    <app-comic [data]="d"></app-comic>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'creators'">
+                <app-col *ngFor="let d of data.data.results">
+                    <app-creator [data]="d"></app-creator>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'events'">
+                <app-col *ngFor="let d of data.data.results">
+                    <app-event [data]="d"></app-event>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'series'">
+                <app-col *ngFor="let d of data.data.results">
+                    <app-serie [data]="d"></app-serie>
+                </app-col>
+            </ng-container>
+            <ng-container *ngSwitchCase="'stories'">
+                <app-col *ngFor="let d of data.data.results">
+                    <app-storie [data]="d"></app-storie>
+                </app-col>
+            </ng-container>
+        </app-row>
     </ng-container>
-    <ng-container *ngSwitchCase="'comics'">
-        <app-comic *ngFor="let d of data.data.results" [data]="d"></app-comic>
-    </ng-container>
-    <ng-container *ngSwitchCase="'creators'">
-        <app-creator *ngFor="let d of data.data.results" [data]="d"></app-creator>
-    </ng-container>
-    <ng-container *ngSwitchCase="'events'">
-        <app-event *ngFor="let d of data.data.results" [data]="d"></app-event>
-    </ng-container>
-    <ng-container *ngSwitchCase="'series'">
-        <app-serie *ngFor="let d of data.data.results" [data]="d"></app-serie>
-    </ng-container>
-    <ng-container *ngSwitchCase="'stories'">
-        <app-storie *ngFor="let d of data.data.results" [data]="d"></app-storie>
-    </ng-container>
-</ng-container>
+</app-page>
