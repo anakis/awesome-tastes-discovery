@@ -1,6 +1,6 @@
 {
   "name": "awesome-tastes-discovery",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --prod --aot",
-    "release": "standard-version && git push — follow-tags origin master && npm publish"
+    "release": "standard-version"
   },
   "private": true,
   "dependencies": {
