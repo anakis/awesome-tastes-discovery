@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ComicComponent } from './comic.component';
 import { FeatureModule } from '@app/feature/feature.module';
+import { TemplateModule } from '@app/template/template.module';
 
 describe('ComicComponent', () => {
   let component: ComicComponent;
@@ -10,7 +11,7 @@ describe('ComicComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ComicComponent ],
-      imports: [ FeatureModule ]
+      imports: [ FeatureModule, TemplateModule ]
     })
     .compileComponents();
   }));

@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SerieComponent } from './serie.component';
 import { FeatureModule } from '@app/feature/feature.module';
+import { TemplateModule } from '@app/template/template.module';
 
 describe('SerieComponent', () => {
   let component: SerieComponent;
@@ -10,7 +11,7 @@ describe('SerieComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SerieComponent ],
-      imports: [ FeatureModule ]
+      imports: [ FeatureModule, TemplateModule ]
     })
     .compileComponents();
   }));

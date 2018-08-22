@@ -1,6 +1,8 @@
-<p>
-    Name: {{data.name}} <br />
+<app-card [title]="data.name">
+  <section class="body">
     <img src="{{data.thumbnail?.path + '/portrait_small.'+ data.thumbnail?.extension}}" alt="{{data.name}}">
-    <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()" checkBy="id"></app-like>
-  </p>
-  
+  </section>
+  <section class="action">
+      <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()" checkBy="id"></app-like>
+  </section>
+</app-card>

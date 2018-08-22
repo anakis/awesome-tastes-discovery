@@ -7,11 +7,13 @@ import { EventComponent } from './event/event.component';
 import { SerieComponent } from './serie/serie.component';
 import { StorieComponent } from './storie/storie.component';
 import { FeatureModule } from '@app/feature/feature.module';
+import { TemplateModule } from '@app/template/template.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FeatureModule
+    FeatureModule,
+    TemplateModule
   ],
   declarations: [CharacterComponent, ComicComponent, CreatorComponent, EventComponent, SerieComponent, StorieComponent],
   exports: [CharacterComponent, ComicComponent, CreatorComponent, EventComponent, SerieComponent, StorieComponent]

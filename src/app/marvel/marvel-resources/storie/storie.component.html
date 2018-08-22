@@ -1,7 +1,10 @@
-<p>
-    Title: {{data.title}} <br />    
-    Description: {{data.description || 'None'}} <br />    
+<app-card [title]="data.title">
+  <section class="body">
+    <b>Description:</b> {{data.description || 'None'}}
+    <br />
     <img *ngIf="data.thumbnail" src="{{data.thumbnail?.path + '/portrait_small.'+ data.thumbnail?.extension}}" alt="{{data.title}}">
+  </section>
+  <section class="action">
     <app-like [data]="data" [type]="type" [resource]="resource" (likeChange)="onLikeChange()" checkBy="id"></app-like>
-  </p>
-  
+  </section>
+</app-card>
