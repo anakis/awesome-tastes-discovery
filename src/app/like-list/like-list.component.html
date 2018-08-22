@@ -1,40 +1,44 @@
-<div *ngFor="let d of data">
-  <ng-container [ngSwitch]="d.type">
-    <ng-container *ngSwitchCase="'people'">
-      <app-people [data]="d.data" (likeChange)="onLikeChange()"></app-people>
-    </ng-container>
-    <ng-container *ngSwitchCase="'film'">
-      <app-film [data]="d.data" (likeChange)="onLikeChange()"></app-film>
-    </ng-container>
-    <ng-container *ngSwitchCase="'starship'">
-      <app-starship [data]="d.data" (likeChange)="onLikeChange()"></app-starship>
-    </ng-container>
-    <ng-container *ngSwitchCase="'vehicle'">
-      <app-vehicle [data]="d.data" (likeChange)="onLikeChange()"></app-vehicle>
-    </ng-container>
-    <ng-container *ngSwitchCase="'specie'">
-      <app-specie [data]="d.data" (likeChange)="onLikeChange()"></app-specie>
-    </ng-container>
-    <ng-container *ngSwitchCase="'planet'">
-      <app-planet [data]="d.data" (likeChange)="onLikeChange()"></app-planet>
-    </ng-container>
-    <ng-container *ngSwitchCase="'character'">
-      <app-character [data]="d.data" (likeChange)="onLikeChange()"></app-character>
-    </ng-container>
-    <ng-container *ngSwitchCase="'comic'">
-      <app-comic [data]="d.data" (likeChange)="onLikeChange()"></app-comic>
-    </ng-container>
-    <ng-container *ngSwitchCase="'creator'">
-      <app-creator [data]="d.data" (likeChange)="onLikeChange()"></app-creator>
-    </ng-container>
-    <ng-container *ngSwitchCase="'event'">
-      <app-event [data]="d.data" (likeChange)="onLikeChange()"></app-event>
-    </ng-container>
-    <ng-container *ngSwitchCase="'serie'">
-      <app-serie [data]="d.data" (likeChange)="onLikeChange()"></app-serie>
-    </ng-container>
-    <ng-container *ngSwitchCase="'storie'">
-      <app-storie [data]="d.data" (likeChange)="onLikeChange()"></app-storie>
-    </ng-container>
-  </ng-container>
-</div>
+<app-page title="What I Like">
+  <app-row>
+    <app-col *ngFor="let d of data">
+      <ng-container [ngSwitch]="d.type">
+        <ng-container *ngSwitchCase="'people'">
+          <app-people [data]="d.data" (likeChange)="onLikeChange()"></app-people>
+        </ng-container>
+        <ng-container *ngSwitchCase="'film'">
+          <app-film [data]="d.data" (likeChange)="onLikeChange()"></app-film>
+        </ng-container>
+        <ng-container *ngSwitchCase="'starship'">
+          <app-starship [data]="d.data" (likeChange)="onLikeChange()"></app-starship>
+        </ng-container>
+        <ng-container *ngSwitchCase="'vehicle'">
+          <app-vehicle [data]="d.data" (likeChange)="onLikeChange()"></app-vehicle>
+        </ng-container>
+        <ng-container *ngSwitchCase="'specie'">
+          <app-specie [data]="d.data" (likeChange)="onLikeChange()"></app-specie>
+        </ng-container>
+        <ng-container *ngSwitchCase="'planet'">
+          <app-planet [data]="d.data" (likeChange)="onLikeChange()"></app-planet>
+        </ng-container>
+        <ng-container *ngSwitchCase="'character'">
+          <app-character [data]="d.data" (likeChange)="onLikeChange()"></app-character>
+        </ng-container>
+        <ng-container *ngSwitchCase="'comic'">
+          <app-comic [data]="d.data" (likeChange)="onLikeChange()"></app-comic>
+        </ng-container>
+        <ng-container *ngSwitchCase="'creator'">
+          <app-creator [data]="d.data" (likeChange)="onLikeChange()"></app-creator>
+        </ng-container>
+        <ng-container *ngSwitchCase="'event'">
+          <app-event [data]="d.data" (likeChange)="onLikeChange()"></app-event>
+        </ng-container>
+        <ng-container *ngSwitchCase="'serie'">
+          <app-serie [data]="d.data" (likeChange)="onLikeChange()"></app-serie>
+        </ng-container>
+        <ng-container *ngSwitchCase="'storie'">
+          <app-storie [data]="d.data" (likeChange)="onLikeChange()"></app-storie>
+        </ng-container>
+      </ng-container>
+    </app-col>
+  </app-row>
+</app-page>

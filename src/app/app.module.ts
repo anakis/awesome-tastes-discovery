@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LikeListComponent } from './like-list/like-list.component';
 import { StarWarsResourcesModule } from '@app/star-wars/star-wars-resources/star-wars-resources.module';
 import { MarvelResourcesModule } from '@app/marvel/marvel-resources/marvel-resources.module';
+import { FeatureModule } from '@app/feature/feature.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MarvelResourcesModule } from '@app/marvel/marvel-resources/marvel-resou
     HttpClientModule,
     AppRoutingModule,
     StarWarsResourcesModule,
-    MarvelResourcesModule
+    MarvelResourcesModule,
+    FeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]

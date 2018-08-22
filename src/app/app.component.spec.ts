@@ -7,6 +7,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { LikeListComponent } from '@app/like-list/like-list.component';
 import { StarWarsResourcesModule } from '@app/star-wars/star-wars-resources/star-wars-resources.module';
 import { MarvelResourcesModule } from '@app/marvel/marvel-resources/marvel-resources.module';
+import { FeatureModule } from '@app/feature/feature.module';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -19,7 +20,8 @@ describe('AppComponent', () => {
         TemplateModule,
         AppRoutingModule,
         StarWarsResourcesModule,
-        MarvelResourcesModule
+        MarvelResourcesModule,
+        FeatureModule
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' }
