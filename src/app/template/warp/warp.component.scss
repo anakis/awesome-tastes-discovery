@@ -2,10 +2,18 @@
 
 :host {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .warp-content {    
     height: 100vh;    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .yellow-theme {

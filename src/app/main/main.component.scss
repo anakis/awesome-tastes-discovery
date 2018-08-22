@@ -1,0 +1,15 @@
+a {
+    font-size: 4em;
+    text-decoration: none;
+    color: black;
+    font-family: Fantasy, Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    font-size: 4.5em;
+    color: #777;
+    text-decoration: underline;
+    -ms-transform: rotate(2deg); /* IE 9 */
+    -webkit-transform: rotate(2deg); /* Safari */
+    transform: rotate(2deg);
+}
