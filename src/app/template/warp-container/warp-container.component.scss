@@ -1,3 +1,10 @@
 .warp-container {
     display: flex;
+    flex-direction: row;
+}
+
+@media screen and (orientation:portrait) {
+    .warp-container {
+        flex-direction: column;
+    }   
 }
