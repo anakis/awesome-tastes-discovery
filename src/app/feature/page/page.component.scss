@@ -41,7 +41,12 @@ ul > li > a {
     justify-content: center;
     align-items: center;
     display: flex;
-    padding: 0 15px;
+    padding: 0 15px;        
+}
+
+ul > li > a.active {
+    background-color: #0143ad !important;
+    color: #fff !important;    
 }
 
 ul > li > a:hover {
