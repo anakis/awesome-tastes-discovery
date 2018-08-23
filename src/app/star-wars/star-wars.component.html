@@ -1,5 +1,5 @@
 <app-page title="Star Wars" [instructions]="instructions">
-    <ul class="checkboxes-container">
+    <ul horizontalList>
         <li *ngFor="let e of resourcesKeys()">
             <input type="radio" name="resource" value="resources[e]" (change)="getResource(resources[e])"> {{resources[e] | firstLetterUpper}}
         </li>

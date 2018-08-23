@@ -1,5 +1,5 @@
 <app-page title="Marvel Comics" [instructions]="instructions">
-    <ul>
+    <ul horizontalList>
         <li *ngFor="let e of resourcesKeys()">
             <input type="radio" name="resource" value="resources[e]" (change)="getResource(resources[e])"> {{resources[e] | firstLetterUpper}}
         </li>
