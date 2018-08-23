@@ -1,3 +1,5 @@
+$imgDimen: 100px;
+
 .card {
     border: 1px solid #e3e3e3;
     padding: 16px;
@@ -12,6 +14,12 @@
     p {
         margin-bottom: 8px;
         font-weight: 300;
+    }
+
+    ::ng-deep .body > img {
+        border-radius: 50%;
+        width: $imgDimen;
+        height: $imgDimen;
     }
 }
 
