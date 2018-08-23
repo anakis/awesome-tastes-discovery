@@ -4,3 +4,9 @@
     justify-content: flex-start;
     padding: 20px;
 }
+
+@media screen and (orientation: portrait) {
+    :host {
+        flex-direction: column;
+    }
+}
