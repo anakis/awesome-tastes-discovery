@@ -6,6 +6,8 @@ import { LikeComponent } from './like/like.component';
 import { RouterModule } from '@angular/router';
 import { TemplateModule } from '@app/template/template.module';
 import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
+import { HorizontalListComponent } from './horizontal-list/horizontal-list.component';
+import { CenterImgComponent } from './center-img/center-img.component';
 
 @NgModule({
   imports: [
@@ -13,7 +15,7 @@ import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator
     TemplateModule,
     RouterModule
   ],
-  declarations: [PageComponent, FirstLetterUpperPipe, LikeComponent, LoadingIndicatorComponent],
-  exports: [PageComponent, LikeComponent, FirstLetterUpperPipe, LoadingIndicatorComponent]
+  declarations: [PageComponent, FirstLetterUpperPipe, LikeComponent, LoadingIndicatorComponent, HorizontalListComponent, CenterImgComponent],
+  exports: [PageComponent, LikeComponent, FirstLetterUpperPipe, LoadingIndicatorComponent, HorizontalListComponent, CenterImgComponent]
 })
 export class FeatureModule { }
