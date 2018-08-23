@@ -6,12 +6,13 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CardComponent } from './card/card.component';
 import { RowComponent } from './row/row.component';
 import { ColComponent } from './col/col.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [WarpComponent, WarpContainerComponent, WelcomeComponent, CardComponent, RowComponent, ColComponent],
-  exports: [WarpComponent, WarpContainerComponent, WelcomeComponent, CardComponent, RowComponent, ColComponent]
+  declarations: [WarpComponent, WarpContainerComponent, WelcomeComponent, CardComponent, RowComponent, ColComponent, SpinnerComponent],
+  exports: [WarpComponent, WarpContainerComponent, WelcomeComponent, CardComponent, RowComponent, ColComponent, SpinnerComponent]
 })
 export class TemplateModule { }

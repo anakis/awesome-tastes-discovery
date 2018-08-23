@@ -1,0 +1,24 @@
+$color: #000;
+
+.spinner {
+    position: fixed;
+    top: 50vh;
+    right: 50vw;
+	width: 32px;
+	height: 32px;
+	clear: both;
+	margin: 20px auto;
+	border: 4px rgba($color,0.25) solid;
+	border-top: 4px rgba($color,1) solid;
+	border-radius: 50%;
+	-webkit-animation: spinnerCircle .6s infinite linear;
+	animation: spinnerCircle .6s infinite linear;
+}
+@-webkit-keyframes spinnerCircle {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(359deg); }
+}
+@keyframes spinnerCircle {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(359deg); }
+}
