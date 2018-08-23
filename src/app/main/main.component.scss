@@ -1,15 +1,27 @@
 a {
     font-size: 4em;
     text-decoration: none;
-    color: black;
-    font-family: Fantasy, Arial, Helvetica, sans-serif;
+    color: #333;
+    max-width: 500px;
+    //font-family: Fantasy, Arial, Helvetica, sans-serif;
 }
 
 a:hover {
     font-size: 4.5em;
-    color: #777;
-    text-decoration: underline;
+    color: darken(#333, 30);
+    text-decoration: none;
     -ms-transform: rotate(2deg); /* IE 9 */
     -webkit-transform: rotate(2deg); /* Safari */
     transform: rotate(2deg);
+    transition-duration: 1s;
+}
+
+@media screen and (orientation: portrait) {
+    a {
+        font-size: 3em;
+    }
+
+    a:hover {
+        font-size: 3.5em;
+    }
 }

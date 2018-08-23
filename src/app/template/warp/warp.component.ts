@@ -19,6 +19,10 @@ export class WarpComponent implements OnInit {
     return this.color === 'yellow';
   }
 
+  checkRed() {
+    return this.color === 'red';
+  }
+
   checkBlue() {
     return this.color === 'blue';
   }

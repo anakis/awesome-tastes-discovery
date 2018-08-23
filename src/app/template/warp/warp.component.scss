@@ -26,6 +26,14 @@
     color: $blue-text;
 }
 
+.red-theme {
+    background-color: $red;
+}
+
+.click-tooltip {
+    color: #555;
+}
+
 @media screen and (orientation:portrait) {
     .warp-content {    
         height: 50vh;

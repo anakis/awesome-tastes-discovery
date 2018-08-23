@@ -3,3 +3,20 @@ ul {
     justify-content: space-around;
     list-style: none;
 }
+
+.checkboxes-container {
+    padding: 0 32px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    li {
+        margin-top: 16px;
+        margin-right: 16px;
+    }
+}
+
+.like-button {
+    margin-top: 8px;
+}

@@ -2,4 +2,23 @@
     border: 1px solid #e3e3e3;
     padding: 16px;
     width: 200px;
+
+    h1 {
+        padding: 0;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    p {
+        margin-bottom: 8px;
+        font-weight: 300;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .card {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
 }

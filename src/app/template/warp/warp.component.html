@@ -1,7 +1,8 @@
 <section class="warp-content" [ngClass]="{
   'yellow-theme': checkYellow(), 
-  'blue-theme': checkBlue()
+  'blue-theme': checkBlue(),
+  'red-theme': checkRed()
 }">
-  <span>Click bellow for</span>
+  <span class="click-tooltip">Click bellow for</span>
   <ng-content></ng-content>
 </section>
